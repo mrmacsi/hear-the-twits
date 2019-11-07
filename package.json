@@ -1,0 +1,39 @@
+{
+  "name": "ls",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "server": "nodemon index.js",
+    "client": "npm run start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client",
+    "webhook": "forever sendgrid_webhook.js"
+  },
+  "engines": {
+    "node": "^8.1.1",
+    "npm": "^5.0.3"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "concurrently": "^4.1.0",
+    "cookie-session": "^2.0.0-beta.3",
+    "create-react-app": "^2.1.8",
+    "express": "^4.16.4",
+    "heroku": "^7.22.7",
+    "loadash": "^1.0.0",
+    "localtunnel": "^1.9.1",
+    "mongoose": "^5.4.19",
+    "nodemon": "^1.18.10",
+    "passport": "^0.4.0",
+    "passport-twitter": "^1.0.4",
+    "oauth": "^0.9.15",
+    "path-parser": "^4.2.0"
+  },
+  "devDependencies": {
+    "forever": "^0.15.3"
+  }
+}
