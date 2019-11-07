@@ -16,7 +16,7 @@ passport.deserializeUser((id, done) => {
     done(null, user);
   });
 });
-
+//1. oAuth authentication strategy for authenticating user using twitter +1
 passport.use(
   new TwitterStrategy(
     {
@@ -30,6 +30,7 @@ passport.use(
 
       if (existingUser) {
         console.log("already exists", existingUser);
+        //4. Store/ log all authentications and API requests in RDMS database (preferably mysql / mongo) +1
         var token = await new Token({
           oAuthProvider:"Twitter",
           oauthAccessToken: token,
@@ -45,6 +46,7 @@ passport.use(
         name: profile.displayName
       }).save();
 
+      //4. Store/ log all authentications and API requests in RDMS database (preferably mysql / mongo) +1
       var token = await new Token({
         oAuthProvider:"Twitter",
         oauthAccessToken: token,
@@ -60,6 +62,7 @@ passport.use(
 );
 
 //BONUS GOOGLE API
+//5. These features must be extendable / reusable so that in future we can reuse these code to support other social media applications
 /* 
 passport.use(
   new GoogleStrategy(

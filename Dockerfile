@@ -1,5 +1,5 @@
 FROM node:10
-
+# 6. If possible, you can Dockerize this project
 # Create app directory
 WORKDIR /usr/src/app
 

@@ -2,7 +2,8 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import { fetchTwits } from "../actions";
 import { NavItem,Dropdown,Button } from 'react-materialize';
-import _ from "lodash";
+//5. These features must be extendable / reusable so that in future we can reuse these code to support other social media applications
+import functions from "../utils/reusableFunctions";
 
 class TwitList extends Component {
   state = {
@@ -17,11 +18,17 @@ class TwitList extends Component {
   renderTwits() {
     var { twits } = this.props;
     const { sortDirection,sortBy,search } = this.state;
-    //sort here
-    twits = _.orderBy(twits, [sortBy],[sortDirection]);
 
+    //3. Display response from above API in a simple interface. We are expecting some interactions with UI such as filtering or sorting by dates. +1
+    //sort here
+    //console.log(twits)
+    twits = functions.sort(twits, sortBy, sortDirection);
+    //console.log(twits)
+
+    //3. Display response from above API in a simple interface. We are expecting some interactions with UI such as filtering or sorting by dates. +1
     //filter here
-    twits = _.filter(twits, item => item.text.toLowerCase().indexOf(search) !== -1 );
+    twits = functions.filter(twits, search);
+    //console.log(twits)
 
     return twits.map(twit => {
       return (

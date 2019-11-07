@@ -12,7 +12,7 @@ import Login from "./Login";
 import Footer from "./Footer";
 import Logs from "./Logs";
 
-
+// 7. If possible, you can use a frontend technology such as Angular or React for your UI.
 
 class App extends Component {
 
