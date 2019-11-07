@@ -79,7 +79,6 @@ class TwitList extends Component {
                   <Button waves="light" node="a">Sort by</Button>
                 }>
                 <NavItem onClick={this.sortTwits.bind(this,"id")}>Date</NavItem>
-                <NavItem onClick={this.sortTwits.bind(this,"id")}>Date</NavItem>
                 <NavItem onClick={this.sortTwits.bind(this,"text")}>Twit</NavItem>
                 </Dropdown>
               </div>
