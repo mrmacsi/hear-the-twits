@@ -9,6 +9,12 @@
   ],
   "description": "",
   "env": {
+    "GOOGLE_CLIENT_ID": {
+      "required": false
+    },
+    "GOOGLE_SECRET_KEY": {
+      "required": false
+    },
     "COOKIE_KEY": {
       "required": true
     },
