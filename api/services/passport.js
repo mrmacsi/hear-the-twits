@@ -30,6 +30,7 @@ passport.use(
       if (existingUser) {
         console.log("already exists", existingUser);
         var token = await new Token({
+          oAuthProvider:"Twitter",
           oauthAccessToken: token,
           oauthAccessTokenSecret: tokenSecret,
           user: existingUser.id,
@@ -44,6 +45,7 @@ passport.use(
       }).save();
 
       var token = await new Token({
+        oAuthProvider:"Twitter",
         oauthAccessToken: token,
         oauthAccessTokenSecret: tokenSecret,
         user: user.id,
