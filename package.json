@@ -30,6 +30,7 @@
     "nodemon": "^1.18.10",
     "passport": "^0.4.0",
     "passport-twitter": "^1.0.4",
+    "passport-google-oauth20": "^1.0.0",
     "oauth": "^0.9.15",
     "path-parser": "^4.2.0"
   },

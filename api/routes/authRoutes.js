@@ -16,6 +16,23 @@ module.exports = app => {
     }
   );
 
+  //BONUS GOOGLE
+  app.get(
+    "/auth/google",
+    passport.authenticate("google", {
+      scope: ["profile", "email"]
+    })
+  );
+
+  app.get(
+    "/auth/google/callback",
+    passport.authenticate("google"),
+    (req, res) => {
+      res.redirect("/twits");
+    }
+  );
+
+
   app.get("/api/logout", (req, res) => {
     req.logout();
     res.redirect("/");

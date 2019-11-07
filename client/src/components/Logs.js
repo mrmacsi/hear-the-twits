@@ -17,6 +17,7 @@ class Logs extends Component {
                 <div>user: {log.user}</div>
                 <div>oauthAccessToken: {log.oauthAccessToken}</div>
                 <div>oauthAccessTokenSecret: {log.oauthAccessTokenSecret}</div>
+                <div>oAuthProvider: {log.oAuthProvider}</div>
               </div>
             </div>
           </div>

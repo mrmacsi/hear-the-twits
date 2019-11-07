@@ -11,7 +11,7 @@ const consumer = new oauth.OAuth(
 module.exports = {
   list_all_twits: async function(req, res) {
     Token.findOne(
-      { user: req.user.id },
+      { user: req.user.id, oAuthProvider:"Twitter" },
       { __v: false },
       {sort: {dateCreated: "desc" }},
       function(err, token) {
@@ -22,7 +22,7 @@ module.exports = {
           } else {
             var parsedData = JSON.parse(data);
             res.send(parsedData);
-          } 
+          }
         });
       }
     );
