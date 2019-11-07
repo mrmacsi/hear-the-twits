@@ -1,4 +1,4 @@
-# twits-app
+# hear-the-twits
 Twitter history application on nodejs, twitter oauth2,passportjs, mlab mongo db, expressjs, mongoose, reactjs & reduxjs
 
 For docker
