@@ -60,6 +60,7 @@ passport.use(
 );
 
 //BONUS GOOGLE API
+/* 
 passport.use(
   new GoogleStrategy(
     {
@@ -85,10 +86,10 @@ passport.use(
         return done(null, existingUser);
       }
 
-      /* const user = await new User({
+      const user = await new User({
         googleID: profile.id,
         name: profile.displayName
-      }).save(); */
+      }).save();
 
       const user = await new User({
         twitterID: profile.id,
@@ -107,4 +108,4 @@ passport.use(
       console.log("new user created", user);
     }
   )
-);
+); */
