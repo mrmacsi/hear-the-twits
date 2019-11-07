@@ -1,5 +1,5 @@
 # twits-app
-Twitter history application on nodejs twitter oauth2,passportjs, mlab mongo db
+Twitter history application on nodejs, twitter oauth2,passportjs, mlab mongo db, expressjs, mongoose, reactjs & reduxjs
 
 For docker
 sudo docker run -p 3000:3000 -d salvadorx1/nodejs-app
